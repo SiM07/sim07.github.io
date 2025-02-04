@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import GitHub from "../assets/github.svg";
+import ShrinkMe from "../assets/shrink-me.svg";
+import LinkedIn from "../assets/linkedIn.svg";
+import Mail from "../assets/mail.svg";
+---
+
+<div class="links">
+  <a
+    href="https://github.com/SiM07"
+    rel="noopener noreferrer"
+    target="_blank"
+    aria-label="Link to my GitHub profile"
+  >
+    <Image src={GitHub} alt="GitHub icon" />
+  </a>
+  <a
+    href="https://www.linkedin.com/in/simon-rolland-tech/"
+    rel="noopener noreferrer"
+    target="_blank"
+    aria-label="Link to my LinkedIn profile"
+  >
+    <Image src={LinkedIn} alt="LinkedIn icon" />
+  </a>
+  <a
+    href="mailto:contact@simonrolland.fr"
+    rel="noopener noreferrer"
+    aria-label="Link to my email address"
+  >
+    <Image src={Mail} alt="Mail icon" />
+  </a>
+</div>
+
+<style>
+  .links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .links a:hover {
+    border-bottom: 1px solid var(--primary-color);
+    margin-bottom: -1px;
+  }
+
+  .links img {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--text-color);
+    padding: 0.75rem;
+  }
+
+  @media (min-width: 576px) {
+    .links a {
+      margin: 0 0.5rem;
+    }
+
+    .links img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+</style>

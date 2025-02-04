@@ -1,0 +1,26 @@
+{
+  "name": "sim07.github.io",
+  "type": "module",
+  "version": "0.0.2",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro build",
+    "astro": "astro",
+    "deploy": "astro build",
+    "prettier": "prettier --write .",
+    "prettier:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "astro": "^4.5.9",
+    "tsparticles": "^3.3.0",
+    "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.14.0"
+  }
+}

@@ -1,0 +1,98 @@
+<script>
+  import { tsParticles } from "@tsparticles/engine";
+  import { loadExternalRepulseInteraction } from "@tsparticles/interaction-external-repulse";
+  import { loadExternalPushInteraction } from "@tsparticles/interaction-external-push";
+  import { loadBaseMover } from "@tsparticles/move-base";
+  import { loadCircleShape } from "@tsparticles/shape-circle";
+  import { loadColorUpdater } from "@tsparticles/updater-color";
+  import { loadOpacityUpdater } from "@tsparticles/updater-opacity";
+  import { loadOutModesUpdater } from "@tsparticles/updater-out-modes";
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    await Promise.all([
+      loadBaseMover(tsParticles, false),
+      loadCircleShape(tsParticles, false),
+      loadColorUpdater(tsParticles, false),
+      loadOpacityUpdater(tsParticles, false),
+      loadOutModesUpdater(tsParticles, false),
+      loadExternalRepulseInteraction(tsParticles, false),
+      loadExternalPushInteraction(tsParticles, false),
+    ]);
+
+    await tsParticles.refresh(true);
+    await tsParticles.load({
+      id: "tsparticles",
+      options: {
+        particles: {
+          number: {
+            value: 6,
+            density: {
+              enable: true,
+              height: 600,
+              width: 1200,
+            },
+          },
+          color: {
+            value: "#0873e8",
+          },
+          opacity: {
+            value: 0.5,
+            animation: {
+              enable: false,
+              speed: 1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 3,
+            animation: {
+              enable: false,
+              sync: false,
+            },
+          },
+          move: {
+            enable: true,
+            speed: 3,
+            direction: "none",
+            random: false,
+            straight: false,
+            outModes: "out",
+            attract: {
+              enable: false,
+              rotate: {
+                x: 600,
+                y: 1200,
+              },
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onHover: {
+              enable: true,
+              mode: "repulse",
+            },
+            onClick: {
+              enable: true,
+              mode: "push",
+            },
+          },
+        },
+        retina_detect: true,
+      },
+    });
+  });
+</script>
+
+<div id="tsparticles"></div>
+
+<style>
+  #tsparticles {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+</style>
