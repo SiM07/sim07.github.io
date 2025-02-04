@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://sim07.github.io">
-    <img alt="Filipe Santos Correa - About Me" src="https://user-images.githubusercontent.com/3514796/55683989-79f20e00-5946-11e9-9893-6238244a8ab3.png" width="300" />
+    <img alt="Simon ROLLAND - About Me" src="https://user-images.githubusercontent.com/3514796/55683989-79f20e00-5946-11e9-9893-6238244a8ab3.png" width="300" />
   </a>
 </div>
 
