@@ -14,13 +14,13 @@
     "prettier:check": "prettier --check ."
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "astro": "^5.2.4",
-    "tsparticles": "^3.3.0",
-    "typescript": "^5.4.3"
+    "@astrojs/check": "^0.9.12",
+    "astro": "^7.4.7",
+    "tsparticles": "^4.5.3",
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
-    "prettier": "^3.2.5",
-    "prettier-plugin-astro": "^0.14.0"
+    "prettier": "^3.9.10",
+    "prettier-plugin-astro": "^1.1.2"
   }
 }
